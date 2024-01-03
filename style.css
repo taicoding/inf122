@@ -1,0 +1,37 @@
+body {
+    background-color: #f0f0f0;
+}
+h1 {
+    color: rgb(255,0, 0);
+    font-size: 25px;
+    font-family: 'Segoe UI';
+    background-color: black;
+}
+p {
+    font-size: large;
+    text-align: center;
+    font-weight: bold;
+    color:rgb(76, 108, 153);
+}
+img{
+    max-width: 25%;
+    max-height: 25%;
+}
+ol li {
+    font-size: 30px;
+    color: blueviolet;
+}
+ul li {
+    color: green;
+    font-weight: bold;
+    background-color: #dcf539;
+    text-align: center;
+}
+
+.enviar{
+    border-radius: 5px;
+    background-color: rgb(0,0,255);
+}
+.etiqueta{
+    background-color: blue;
+}
