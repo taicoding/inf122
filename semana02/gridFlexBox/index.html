@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Nunito:wght@300;400;500;700&family=Roboto:wght@500;700;900&display=swap"
+        rel="stylesheet">
+    <title>Document</title>
+    <style>
+        :root {
+            --white: #FFFFFF;
+            --black: #000000;
+            --purple: #6F2CFF;
+            --light-purple: #EFE9F9;
+            --red-heart: ##A50954;
+            --blue-heart: #ACD9B2;
+            --sm: 14px;
+            --md: 24px;
+            --lg: 60px;
+        }
+
+        body {
+            font-family: 'Nunito';
+            margin: 0;
+        }
+
+        .main {
+            width: 100%;
+            height: 100vh;
+            display: grid;
+            justify-items: center;
+
+            background-color: var(--white);
+        }
+
+        .brochure {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: var(--white);
+        }
+
+        .more-info {
+            display: grid;
+            background-color: var(--light-purple);
+            width: 100%;
+        }
+
+        .title {
+            color: var(--black);
+            text-align: center;
+            font-size: var(--lg);
+        }
+
+        .subtitle {
+            color: var(--black);
+            text-align: center;
+            font-size: var(--md);
+            margin: 4px 0 4px 0;
+        }
+
+        .primary-button {
+            width: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            background-color: var(--purple);
+            color: var(--white);
+            border: none;
+            border-radius: 5px;
+            font-size: var(--md);
+            cursor: pointer;
+            margin: 10% 0 10% 0;
+        }
+
+        .primary-button p {
+            font-size: var(--md);
+        }
+
+        .primary-button img {
+            width: 30px;
+            height: 30px;
+        }
+
+        .icons-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            justify-items: center;
+            justify-content: center;
+
+        }
+
+        .card-container {
+            display: flex;
+            align-items: center;
+            margin: 16px 0 16px 0;
+        }
+
+        .card-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: var(--white);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 28px;
+        }
+
+        .card-icon figure img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .icon-text h2 {
+            font-size: var(--md);
+            margin: 0;
+        }
+
+        .icon-text p {
+            font-size: var(--sm);
+            margin: 0;
+        }
+
+        @media (max-width: 720px) {
+
+            .brochure {
+                justify-items: start;
+                margin: 0% 10% 0% 10%;
+            }
+
+            .title {
+                text-align: start;
+            }
+
+            .subtitle {
+                display: none;
+            }
+
+            .primary-button {
+                align-self: flex-start;
+                margin-top: 0;
+            }
+
+            .icons-container {
+                grid-template-columns: repeat(1, 1fr);
+
+            }
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="brochure">
+            <h1 class="title">Situational Awareness in the Workplace</h1>
+            <p class="subtitle">Free product design illustrations for startups and designers.</p>
+            <p class="subtitle"> High-quality digital assets that have been tested and reviewed by a team of </p>
+            <button class="primary-button">
+                <img src="./icons/bx_bxs-download.svg" alt="" class="button-logo">
+                <p>Download Brochure</p>
+            </button>
+        </div>
+        <div class="more-info">
+            <section class="icons-container">
+                <div class="card-container">
+                    <div class="card-icon">
+                        <figure>
+                            <img src="./icons/bx_bxs-book-heart.svg" alt="" class="logo">
+                        </figure>
+                    </div>
+
+                    <div class="icon-text">
+                        <h2 class="icon-title">Research Materials</h2>
+                        <p class="icon-description">Guide your decisions with our wealth of research.</p>
+                    </div>
+                </div>
+                <div class="card-container">
+                    <div class="card-icon">
+                        <figure>
+                            <img src="./icons/bx_bxs-book-heart.svg" alt="" class="logo">
+                        </figure>
+                    </div>
+
+                    <div class="icon-text">
+                        <h2 class="icon-title">Research Materials</h2>
+                        <p class="icon-description">Guide your decisions with our wealth of research.</p>
+                    </div>
+                </div>
+                <div class="card-container">
+                    <div class="card-icon">
+                        <figure>
+                            <img src="./icons/bx_bxs-book-heart.svg" alt="" class="logo">
+                        </figure>
+                    </div>
+
+                    <div class="icon-text">
+                        <h2 class="icon-title">Research Materials</h2>
+                        <p class="icon-description">Guide your decisions with our wealth of research.</p>
+                    </div>
+                </div>
+                <div class="card-container">
+                    <div class="card-icon">
+                        <figure>
+                            <img src="./icons/bx_bxs-book-heart.svg" alt="" class="logo">
+                        </figure>
+                    </div>
+
+                    <div class="icon-text">
+                        <h2 class="icon-title">Research Materials</h2>
+                        <p class="icon-description">Guide your decisions with our wealth of research.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+
+</html>
