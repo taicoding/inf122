@@ -11,6 +11,7 @@
 }
 
 body {
+    background-color: var(--gray);
     font-family: 'Nunito';
     margin: 0;
 }
@@ -28,6 +29,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 }
 
 .title {
@@ -109,6 +111,10 @@ body {
         width: 80%;
     }
 
+    .card>p {
+        font-size: 1rem;
+    }
+
     .image-container .image-robot {
         width: 50%;
     }
@@ -117,5 +123,18 @@ body {
         margin: 0 10% 0 10%;
     }
 
+    .title-container>.title {
+        font-size: 2rem;
+    }
+
+    .title-container>.sub-title {
+        text-align: center;
+    }
+
+    .card img {
+        width: 44px;
+        height: 32px;
+        margin-top: -18px;
+    }
 
 }
