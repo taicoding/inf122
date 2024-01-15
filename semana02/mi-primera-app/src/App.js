@@ -20,7 +20,7 @@ function App() {
           "¡Anímate a ser parte de esta actividad!",
         ]}
       />
-      <EventoB title="MeetUp 11 - 3 Pitfalls de la Ingeniería de datos (donde no meter la pata)"
+      <EventoC title="MeetUp 11 - 3 Pitfalls de la Ingeniería de datos (donde no meter la pata)"
         image="evento2"
         dateLiteral="25 de Noviembre de 2023"
         placeLiteral="Online"
