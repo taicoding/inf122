@@ -21,7 +21,6 @@ function App() {
           <Boton texto="Reiniciar" esBotonClick={false}
             funcionClick={reiniciar} />
         </div>
-
       </div>
     </div>
   );
