@@ -1,7 +1,7 @@
-import logo from './logo.svg';
 import './App.css';
 import Evento from './components/Evento.js'
 import EventoB from './components/EventoB.js'
+import EventoC from './components/EventoC.js'
 
 function App() {
   return (

@@ -13,7 +13,9 @@ function EventoC({ image, title, dateLiteral, placeLiteral, description }) {
                 <h2 className="card-title">{title}</h2>
                 <p className="card-date">{dateLiteral}</p>
                 <p className="card-place">{placeLiteral}</p>
-                {description.map((line, index) => (<p className="card-description">{line}</p>))}
+                {description.map((line, index) 
+                => (<p className="card-description">
+                    {line}</p>))}
             </div>
         </div>
     );
