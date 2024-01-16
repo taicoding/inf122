@@ -24,15 +24,15 @@ body {
 }
 
 .contendedor-botones {
-  display: grid;
-  grid-template-rows: repeat(2,1fr);
+  display: flex;
+  flex-direction: column;
   justify-items: center;
-  align-items: center;
-  
+
 }
-.contendedor-botones-numeros{
-  display:grid;
+
+.contendedor-botones-numeros {
+  display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2,1fr);
+  grid-template-rows: repeat(2, 1fr);
   align-items: center;
 }

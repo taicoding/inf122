@@ -1,11 +1,9 @@
 import React from 'react';
 import '../style/Contador.css';
 
-function Contador({ nroClicks }) {
+function Contador({ nroClicks, mostrar }) {
     return (
-        <div className='contador'>
-            {nroClicks}
-        </div>
+        mostrar ? <div className='contador'>{nroClicks}</div> : null
     );
 }
 
