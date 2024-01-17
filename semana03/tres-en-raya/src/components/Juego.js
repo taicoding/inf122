@@ -1,82 +1,44 @@
 import React from 'react';
-import TableroD from './TableroD';
+import TableroE from './TableroE';
 import { useState } from 'react';
+
 function Juego() {
-    const [historial, setHistorial] = useState([
-        {
-            cuadros: Array(9).fill(null)
+    const [cuadros, setCuadros] = useState(Array(9).fill(null));
+    const [jugador, setJugador] = useState("X");
+    const [ganador, setGanador] = useState(null);
+    const click = (i) => {
+        const cuadrosTemp = [...cuadros];
+        if (cuadrosTemp[i] === null) {
+            cuadrosTemp[i] = jugador;
+            setCuadros(cuadrosTemp);
+            setJugador(jugador === "X" ? "O" : "X");
         }
-    ]);
-    const [numeroPaso, setNumeroPaso] = useState(0);
-    const [esTurnoDeX, setEsTurnoDeX] = useState(true);
-
-    function alHacerClic(i) {
-        const nuevoHistorial = historial.slice(0, numeroPaso + 1);
-        const actual = nuevoHistorial[nuevoHistorial.length - 1];
-        const cuadros = actual.cuadros.slice();
-        if (calcularGanador(cuadros) || cuadros[i]) {
-            return;
+        if (calcularGanador(cuadrosTemp) !== null) {
+            setGanador(calcularGanador(cuadrosTemp));
         }
-        cuadros[i] = esTurnoDeX ? "X" : "O";
-        setHistorial(nuevoHistorial.concat([{ cuadros }]));
-        setNumeroPaso(nuevoHistorial.length);
-        setEsTurnoDeX(!esTurnoDeX);
     }
-
-    function saltarA(paso) {
-        setNumeroPaso(paso);
-        setEsTurnoDeX(paso % 2 === 0);
-    }
-
-    const actual = historial[numeroPaso];
-    const ganador = calcularGanador(actual.cuadros);
-
-    const movimientos = historial.map((paso, movimiento) => {
-        const descripcion = movimiento ?
-            'Ir al movimiento #' + movimiento :
-            'Ir al inicio del juego';
-        return (
-            <li key={movimiento}>
-                <button onClick={() => saltarA(movimiento)}>{descripcion}</button>
-            </li>
-        );
-    });
-
-    let estado;
-    if (ganador) {
-        estado = "Ganador: " + ganador;
-    } else {
-        estado = "Próximo jugador: " + (esTurnoDeX ? "X" : "O");
-    }
-
     return (
         <div className="juego">
-            <div className="tablero-juego">
-                <TableroD
-                    cuadros={actual.cuadros}
-                    onClick={i => alHacerClic(i)}
-                />
+            <div className="juego-tablero">
+                <h2>{ganador ? `Ganador: ${ganador}` : `Próximo jugador: ${jugador}`}</h2>
+                <TableroE cuadros={cuadros} onClick={(i) => click(i)} />
             </div>
-            <div className="informacion-juego">
-                <div>{estado}</div>
-                <ol>{movimientos}</ol>
-            </div>
+
         </div>
     );
 }
-
-// ========================================
+export default Juego;
 
 function calcularGanador(cuadros) {
     const lineas = [
-        [0, 1, 2],
-        [3, 4, 5],
-        [6, 7, 8],
-        [0, 3, 6],
-        [1, 4, 7],
-        [2, 5, 8],
-        [0, 4, 8],
-        [2, 4, 6]
+        [0, 1, 2], // primera fila
+        [3, 4, 5], // segunda fila
+        [6, 7, 8], // tercera fila
+        [0, 3, 6], // primera columna
+        [1, 4, 7], // segunda columna
+        [2, 5, 8], // tercera columna
+        [0, 4, 8], // diagonal
+        [2, 4, 6] // diagonal
     ];
     for (let i = 0; i < lineas.length; i++) {
         const [a, b, c] = lineas[i];
@@ -86,5 +48,3 @@ function calcularGanador(cuadros) {
     }
     return null;
 }
-
-export default Juego;
