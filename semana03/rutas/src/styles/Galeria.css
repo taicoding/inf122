@@ -1,0 +1,22 @@
+.galeria{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+    align-items: center;
+}
+.galeria img{
+    width: 25px;
+    height: 25px;
+}
+.contenedor-image{
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(3,1fr);    
+}
+.contenedor-image img{
+    margin: 15px;
+    width: 100px;
+    height: 100px;
+}
+
