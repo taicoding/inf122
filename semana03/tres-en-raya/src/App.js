@@ -18,7 +18,9 @@ function App() {
       {/* <Tablero />
       <TableroB />
       <TableroE />
-      <Juego />*/}
+      
+      <TableroD />
+      <JuegoA />*/}
       <JuegoA />
     </div>
   );
