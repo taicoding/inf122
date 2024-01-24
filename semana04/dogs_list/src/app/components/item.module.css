@@ -1,0 +1,4 @@
+.item {
+    border-radius: 50% 50%;
+    object-fit: cover;
+}
