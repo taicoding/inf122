@@ -13,7 +13,8 @@ export default function RootLayout({ children }) {
     <html lang="es">
       <body>
         <h1>Soy un Layout</h1>
-        {children}</body>
+        {children}
+      </body>
     </html>
   );
 }
