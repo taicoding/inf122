@@ -1,5 +1,4 @@
 "use client"
-
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import style from "./dogs.module.css";
